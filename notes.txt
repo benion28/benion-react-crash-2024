@@ -1,0 +1,47 @@
+npm create vite@latest my-project -- --template react
+
+cd my-project
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+https://www.npmjs.com/package/json-server
+
+npm install json-server
+
+{
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+
+$ npx json-server db.json
+
+$ curl http://localhost:3000/posts/1
+{
+  "id": "1",
+  "title": "a title"
+}
+
+"homepage": "https://benion28.github.io/benion-react-crash-2024",
